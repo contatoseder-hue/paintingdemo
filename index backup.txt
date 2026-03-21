@@ -1,0 +1,419 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Affordable Painter</title>
+<!...mobile text...>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    img { max-width: 100%; height: auto; }
+    .container { width: 90%; margin: auto; }
+    @media (max-width: 600px) {
+      .container { font-size: 14px; }
+    }
+  </style>
+<!...mobile end...>
+
+
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<style>
+    /* Reset default margins */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Top bar container */
+    .topbar {
+        background-color: #333;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    /* Logo / Brand */
+    .topbar .logo {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    /* Navigation links */
+    .topbar a {
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        transition: background 0.3s;
+    }
+
+    /* Hover effect */
+    .topbar a:hover {
+        background-color: #575757;
+        border-radius: 4px;
+    }
+
+    /* Right-aligned section */
+    .topbar .right {
+        display: flex;
+        align-items: center;
+    }
+
+    /* Search box */
+    .search-box {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-box input {
+        padding: 6px;
+        border: none;
+        border-radius: 4px 0 0 4px;
+        outline: none;
+    }
+
+    .search-box button {
+        padding: 6px 10px;
+        border: none;
+        background: #ff9800;
+        color: white;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+    }
+
+    .search-box button:hover {
+        background: #e68900;
+    }
+
+    /* Responsive menu for small screens */
+    @media screen and (max-width: 600px) {
+        .topbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .topbar a {
+            display: block;
+            width: 100%;
+        }
+        .search-box {
+            width: 100%;
+            margin-top: 10px;
+        }
+        .search-box input {
+            flex: 1;
+            width: 80%;
+        }
+    }
+</style>
+
+
+
+
+
+
+<body>
+
+
+<div class="topbar">
+    <a href="#" class="logo"></a>
+    <div class="right">
+        <a href="index.html">Home</a>
+        <a href="index.html">Services</a>
+        <a href="#">About</a>
+        <a href="#contact-form">Contact</a>
+<div class="search-box">
+            <input type="text" placeholder="Search...">
+            <button>Go</button>
+        </div>
+    </div>
+</div>
+</body>
+
+<!-- Icon in top-left -->
+<img src="icon3-Picsart-BackgroundRemover.jpg" alt="Logo" width="150" height="100">
+
+    </a>
+</div>
+
+<h2>3XPAINTING & RENOVATIONS</h2>
+<p>Quality you can trust, prices you’ll love.</p>
+
+
+
+
+
+
+
+
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Affordable Painter</h1>
+    <p class="subtitle">
+Need Your Home Painted? Get a Fresh New Look as soon as 
+next week!<p></p>
+We are professional interior & exterior painting with high-quality
+ finishes and fast turnaround.</p>
+<p>✔Smooth, clean, professional results.</p>
+<p>✔Free color consultation.</p>
+<p>✔ We protect your floors, furniture & belongings</p>
+<p>✔ Affordable pricing</p>
+<p>✔ Free estimates — no obligation</p>
+
+    </p>
+    <p class="description">
+     Whether it’s one room, the whole house, or touch-ups, I’ve got you covered.
+    </p>
+    <a href="#" class="btn">Listen Now</a>
+  </div>
+
+  <div class="hero-image">
+    <img src="g1.jpg" alt="Hero Image">
+  </div>
+</section>
+
+<!-- FEATURE SECTION -->
+<section class="feature">
+  <div class="feature-image">
+    <img src="images/cheaper-painter.jpg" alt="Feature Image">
+  </div>
+
+  <div class="feature-text">
+   
+    <p>
+ <h2>Sheetrock Services — Precision, Strength & Perfectly Smooth Walls</h2>
+  <p>When it comes to Sheetrock, details matter — and that’s where our expertise stands out.</p>
+  <p>We provide professional Sheetrock installation, repair, taping, and finishing </P>with a level 
+     of precision that ensures your walls look flawless every time.</p>
+
+  <p>From new construction to remodels and small repairs, our team delivers:</p>
+  <ul>
+    <li>Clean, accurate installation with straight lines and solid structure</li>
+    <li>Seamless taping and joint finishing for perfectly smooth surfaces</li>
+    <li>Fast, reliable repairs for cracks, dents, water damage, or uneven areas</li>
+    <li>Paint-ready results that elevate the overall quality of your space</li>
+  </ul>
+
+  <p>We combine skill, efficiency, and years of experience to give you walls that look perfect.</p> 
+     If you want Sheetrock work done right the first time, you’re in the right place.</p>
+    </p>
+    <a href="#" class="btn secondary">Email us</a>
+  </div>
+</section>
+
+<!-- POSTS SECTION -->
+<section class="posts">
+  <h2 class="section-title">Get Cooking</h2>
+
+  <div class="post">
+    <img src="g1.jpg" alt="Post Image">
+    <div class="post-text">
+      <h3>Creamy Fish Dinner</h3>
+      <p>
+        A rich and comforting dish perfect for weeknight dinners.
+        Simple ingredients, amazing flavor. <a href="about.html" target="contentFrame"></a>
+      </p>
+    </div>
+  </div>
+
+  <div class="post">
+    <img src="g1.jpg" alt="Post Image">
+    <div class="post-text">
+      <h3>Spaghetti with Meatballs</h3>
+      <p>
+        Classic comfort food made easy, with tips for perfect sauce
+        every time.
+      </p>
+    </div>
+  </div>
+
+  <div class="post">
+    <img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painter.jpg" alt="Post Image">
+    <div class="post-text">
+      <h3>Oven Baked Salmon</h3>
+      <p>
+        Light, healthy, and full of flavor. A great meal for any night.
+      </p>
+    </div>
+  </div>
+
+
+
+  <a href="#" class="btn center" class="rollover-link">Chat on Telegram</a>
+
+</section>
+<!...galeria...?
+<!-- Images used to open the lightbox -->
+<div class="row footer-gallery">
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painter.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="t.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="t2.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+  </div>
+  <div class="column">
+    <img src="t.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+  </div>
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painters.jpg" class="rollover-img" style="width:100%"> <!...after...>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/smooth-walls.png" class="rollover-img" style="width:100%"><!...antes...>
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/smooth-wall.png" class="rollover-img" style="width:100%"><!...after...>
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painter.jpg" class="rollover-img" alt="Feature image">
+
+    </div>
+
+
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+    <!-- Thumbnail image controls -->
+    <div class="column">
+      <img class="demo" src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/smooth-walls.png"  onclick="currentSlide(1)" alt="After">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="https://www.w3schools.com/howto/img_mountains_wide.jpg" onclick="currentSlide(2)" alt="Before">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="https://www.w3schools.com/howto/img_snow_wide.jpg" onclick="currentSlide(3)" alt="After">
+    </div>
+
+    <div class="column">
+      <img class="demo" src="https://www.w3schools.com/howto/img_nature_wide.jpg" onclick="currentSlide(4)" alt="Bfore">
+    </div>
+  </div>
+</div>
+
+
+<script>
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+<!...Galeria end...>
+
+
+
+<!-- FOOTER / CONTACT -->
+<footer class="footer">
+  <div class="footer-column">
+   <h3>Recommended Paint & Colors</h3>
+  <p>We trust these professional-grade paints and tools for smooth, long-lasting results.</p>
+  <a href="YOUR-AFFILIATE-LINK" class="rollover-link" target="_blank" class="affiliate-btn">
+    <img src="benjamin.jpg" class="rollover-img"><P>View Recommended Paint</a></P>
+
+ 
+
+<p><small>*Some links may be affiliate links at no extra cost to you.</small></p>
+
+
+  </div>
+
+  <div class="footer-column">
+    <h3>Contact Us</h3>
+  <form action="https://submit-form.com/4WKjmTdo4">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" placeholder="Name" required="" />
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" placeholder="Email" required="" />
+  <label for="message">Message</label>
+  <textarea
+    id="message"
+    name="message"
+    placeholder="Message"
+    required=""
+  ></textarea>
+  <button type="submit">Send</button>
+</form>
+
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

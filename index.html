@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Affordable Painter</title>
+
+<!-- Performance -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="preconnect" href="https://raw.githubusercontent.com" crossorigin>
+
+<!-- Critical Styles -->
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Top Bar */
+.topbar {
+  background-color: #333;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.topbar .logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.topbar a {
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.topbar a:hover {
+  background-color: #575757;
+  border-radius: 4px;
+}
+.topbar .right {
+  display: flex;
+  align-items: center;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+}
+.search-box input {
+  padding: 6px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+.search-box button {
+  padding: 6px 10px;
+  border: none;
+  background: #ff9800;
+  color: white;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+.search-box button:hover {
+  background: #e68900;
+}
+@media screen and (max-width: 600px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .topbar a {
+    display: block;
+    width: 100%;
+  }
+  .search-box {
+    width: 100%;
+    margin-top: 10px;
+  }
+  .search-box input {
+    flex: 1;
+    width: 80%;
+  }
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #c97c3a;
+  color: white;
+  padding: 10px 22px;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 15px;
+}
+.btn.secondary {
+  background: #b46a2f;
+}
+.btn.center {
+  display: block;
+  width: fit-content;
+  margin: 40px auto 0;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  gap: 40px;
+  padding: 60px 8%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.hero-content {
+  flex: 1;
+}
+.hero h1 {
+  font-size: 3rem;
+}
+.subtitle {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+.description {
+  color: #666;
+}
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 6px;
+}
+
+/* Feature Section */
+.feature {
+  display: flex;
+  gap: 40px;
+  padding: 60px 8%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.feature-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 6px;
+}
+.feature-text {
+  flex: 1;
+}
+
+/* Posts Section */
+.posts {
+  padding: 60px 8%;
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+.post {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+.post img {
+  width: 180px;
+  border-radius: 6px;
+}
+.post-text h3 {
+  margin-bottom: 8px;
+}
+
+/* Gallery Lightbox */
+.row > .column { padding: 0 8px; float: left; width: 25%; }
+.row:after { content: ""; display: table; clear: both; }
+.modal { display: none; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: black; }
+.modal-content { position: relative; background-color: #000000; margin: auto; padding: 0; width: 90%; max-width: 1200px; }
+.close { color: white; position: absolute; top: 10px; right: 25px; font-size: 35px; font-weight: bold; }
+.close:hover, .close:focus { color: #999; text-decoration: none; cursor: pointer; }
+.mySlides { display: none; }
+.prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -50px; color: white; font-weight: bold; font-size: 20px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; -webkit-user-select: none; }
+.next { right: 0; border-radius: 3px 0 0 3px; }
+.prev:hover, .next:hover { background-color: rgba(0, 0, 0, 0.8); }
+.numbertext { color: #f2f2f2; font-size: 12px; padding: 8px 12px; position: absolute; top: 0; }
+.caption-container { text-align: center; background-color: black; padding: 2px 16px; color: white; }
+img.demo { opacity: 0.6; }
+.active, .demo:hover { opacity: 1; }
+img.hover-shadow { transition: 0.3s; }
+.hover-shadow:hover { box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19); }
+.column img { width: 100%; height: 220px; object-fit: cover; display: block; }
+@media (max-width: 900px) { .column { width: 50%; } .column img { height: 200px; } }
+@media (max-width: 500px) { .column { width: 100%; } .column img { height: 180px; } }
+.mySlides img { width: 100%; height: auto; max-height: 60vh; object-fit: contain; }
+
+/* Footer */
+.footer {
+  background: #222;
+  color: white;
+  display: flex;
+  gap: 40px;
+  padding: 50px 8%;
+  flex-wrap: wrap;
+}
+.footer-column { flex: 1; }
+.footer input, .footer textarea { width: 100%; padding: 10px; margin-top: 10px; border: none; border-radius: 4px; }
+.footer textarea { height: 80px; }
+
+/* Footer image fix */
+.footer-column img.rollover-img {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero, .feature, .post { flex-direction: column; text-align: center; }
+  .post img { width: 100%; max-width: 300px; }
+}
+</style>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <a href="#" class="logo"></a>
+  <div class="right">
+    <a href="index.html">Home</a>
+    <a href="index.html">Services</a>
+    <a href="#">About</a>
+    <a href="#contact-form">Contact</a>
+    <div class="search-box">
+      <input type="text" placeholder="Search...">
+      <button>Go</button>
+    </div>
+  </div>
+</div>
+
+<!-- Logo -->
+<img src="icon3-Picsart-BackgroundRemover.jpg" alt="Logo" width="150" height="100" loading="lazy">
+
+<h2>3XPAINTING & RENOVATIONS</h2>
+<p>Quality you can trust, prices you’ll love.</p>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Affordable Painter</h1>
+    <p class="subtitle">
+      Need Your Home Painted? Get a Fresh New Look as soon as next week!
+    </p>
+    <p>✔ Smooth, clean, professional results.</p>
+    <p>✔ Free color consultation.</p>
+    <p>✔ We protect your floors, furniture & belongings</p>
+    <p>✔ Affordable pricing</p>
+    <p>✔ Free estimates — no obligation</p>
+
+    <p class="description">
+      Whether it’s one room, the whole house, or touch-ups, I’ve got you covered.
+    </p>
+
+    <a href="https://wa.me/18622155740" target="_blank" class="btn">Chat On WhatsApp</a>
+  </div>
+
+  <div class="hero-image">
+    <img src="best-painter-in-nj.jpg" height="560"  width="630" alt="Painter Work" loading="lazy">
+  </div>
+</section>
+
+<!-- FEATURE SECTION -->
+<section class="feature">
+  <div class="feature-image">
+    <img src="images/cheaper-painter.jpg" height="420" alt="Feature Image">
+  </div>
+
+  <div class="feature-text">
+    <h2>Sheetrock Services — Precision, Strength & Perfectly Smooth Walls</h2>
+    <p>When it comes to Sheetrock, details matter — and that’s where our expertise stands out.</p>
+    <p>We provide professional Sheetrock installation, repair, taping, and finishing with precision that ensures your walls look flawless every time.</p>
+    <ul>
+      <li>Clean, accurate installation with straight lines and solid structure</li>
+      <li>Seamless taping and joint finishing for perfectly smooth surfaces</li>
+      <li>Fast, reliable repairs for cracks, dents, water damage, or uneven areas</li>
+      <li>Paint-ready results that elevate the overall quality of your space</li>
+    </ul>
+    <a href="mailto:contatoseder@gmail.com" class="btn secondary">Email us</a>
+  </div>
+...
+</section>
+
+<!-- POSTS SECTION -->
+<section class="posts">
+
+  <h2> Why Choose 3XPainting?</h2>
+  <p>You get true value for your money without compromising quality.</p>
+  <p>We protect your belongings and treat your home with care and attention every time.</p>
+  <p>We use clean drop sheets and always clean up thoroughly after completing the job.</p>
+
+  <h2 class="section-title">Apartments</h2>
+
+<div class="post">
+  <img src="smaill-repair.png" alt="Post Image">
+  <div class="post-text">
+    <h3>Smaller surface area.</h3>
+    <p>
+      Painting a single room means fewer walls to cover,<p>
+      less paint required, and lower overall labor costs.
+      A quick refresh without the full-home price.
+    </p>
+  </div>
+</div>
+...
+
+
+  <div class="post">
+    <img src="g1.jpg" alt="Post Image">
+    <div class="post-text">
+      <h3>Fast Small Wall Repairs</h3>
+      <p>Quick sheetrock patching and seamless paint touch-ups to restore your apartment walls like new.</p>
+    </div>
+  </div>
+
+  <div class="post">
+    <img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painter.jpg" alt="Post Image">
+    <div class="post-text">
+      <h3>Professional Apartment Touch-Ups</h3>
+      <p>From minor drywall damage to fresh paint, we handle small repairs with clean, precise results.</p>
+    </div>
+  </div>
+
+  <a href="https://t.me/ecunha09" target="_blank" class="btn center">Chat on Telegram</a>
+</section>
+
+<!-- GALLERY SECTION --> 
+<div class="row footer-gallery">
+  <div class="column"><img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painter.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"></div>
+  <div class="column"><img src="t3.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow"></div>
+  <div class="column"><img src="t2.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow"></div>
+  <div class="column"><img src="t.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow"></div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <div class="mySlides"><div class="numbertext">1 / 4</div><img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painters.jpg" style="width:100%"></div>
+    <div class="mySlides"><div class="numbertext">2 / 4</div><img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/smooth-walls.png" style="width:100%"></div>
+    <div class="mySlides"><div class="numbertext">3 / 4</div><img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/smooth-wall.png" style="width:100%"></div>
+    <div class="mySlides"><div class="numbertext">4 / 4</div><img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painter.jpg" style="width:100%"></div>
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <div class="caption-container"><p id="caption"></p></div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-column">
+    <h3>Recommended Paint & Colors</h3>
+    <p>We trust these professional-grade paints and tools for smooth, long-lasting results.</p>
+    <a href="https://www.amazon.com/s?k=interior+paint+benjamin+moore&crid=3BU5HKU6U1EJ7&sprefix=Interior+Paint+bemjamin+%2Caps%2C89&ref=nb_sb_ss_p13n-expert-pd-ops-ranker_1_24" class="rollover-link" target="_blank">
+      <img src="benjamin.jpg" class="rollover-img"><p>View Recommended Paint</p>
+    </a>
+  </div>
+
+  <div class="footer-column">
+    <h3>Contact Us</h3>
+    <form action="https://submit-form.com/4WKjmTdo4">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</footer>
+
+<!-- LIGHTBOX SCRIPT -->
+<script>
+function openModal() { document.getElementById("myModal").style.display = "block"; }
+function closeModal() { document.getElementById("myModal").style.display = "none"; }
+var slideIndex = 1;
+showSlides(slideIndex);
+function plusSlides(n) { showSlides(slideIndex += n); }
+function currentSlide(n) { showSlides(slideIndex = n); }
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
+  for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+  for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
+  slides[slideIndex-1].style.display = "block";
+  if(dots[slideIndex-1]) dots[slideIndex-1].className += " active";
+  if(captionText && dots[slideIndex-1]) captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+<script src="script.js" defer></script>
+
+</body>
+</html>

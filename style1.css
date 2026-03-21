@@ -1,0 +1,549 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 120px 20px;
+  width: 100%;
+}
+
+
+
+#contact {
+  width: 100%;
+  padding: 80px 20px;     /* space from top & bottom */
+  box-sizing: border-box;
+}
+
+#contact form {
+  max-width: 500px;
+  margin: 0 auto;        /* centers the form */
+}
+
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 0.85rem;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-bottom: 1px solid #eee;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+/* HERO */
+.hero {
+  padding: 140px 20px;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.hero-text h1 {
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.small {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 550px;
+  height: 360px;
+  object-fit: cover;
+}
+
+/* CONTENT SECTIONS */
+.content {
+  padding: 140px 20px;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.content-text h2 {
+  font-family: Georgia, serif;
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+}
+
+.content-text p {
+  color: #666;
+  line-height: 1.8;
+}
+
+.content-image img {
+  width: 100%;
+  max-width: 550px;
+  height: 360px;
+  object-fit: cover;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 30px;
+  background: #d4834a;
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+/* REVERSE */
+.reverse .content-container {
+  flex-direction: row-reverse;
+}
+
+/* CAROUSEL */
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 100px 20px;
+  width: 100%;
+}
+
+/* Image container */
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Carousel image */
+#carousel-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+/* Overlay text */
+.carousel-text {
+  position: absolute;
+  bottom: 20px;          /* position text near bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: clamp(1rem, 3vw, 1.8rem); /* responsive */
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 5px;
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;   /* so it doesn’t block buttons */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .hero-container,
+  .content-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+#contact {
+  position: relative !important;
+  float: none !important;
+  clear: both !important;
+
+  width: 100% !important;
+  margin: 120px auto 0 auto !important;
+  padding: 80px 100px !important;
+
+  display: block !important;
+  text-align: center;
+}
+
+#contact form {
+  margin: 0 auto !important;
+  max-width: 440px !important;
+}
+
+.page-section {
+  width: 100%;
+ clear: both;
+}
+
+
+}
+
+
+/* NAVBAR FIX (if fixed position) */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+}
+
+/* CONTACT SECTION RESET */
+#contact {
+  width: 100%;
+  margin-top: 120px;        /* space below navbar */
+  padding: 80px 20px;
+
+  display: block;
+  clear: both;
+
+  text-align: center;       /* centers "Contact Us" */
+  background: #f9f9f9;
+}
+
+/* CENTER HEADING */
+#contact h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* CENTER FORM */
+#contact form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* INPUTS */
+
+#contact input,
+#contact textarea {
+  padding: 12px 14px;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+#contact textarea {
+  height: 180px;   /* increase this as you like */
+  resize: vertical; /* allows user to resize if they want */
+}#contact {
+  border: 3px solid beige;
+}
+
+<!
+...start...>
+
+
+.hero {
+  height: 100vh;           /* full screen */
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  background-color: #f0f0f0;
+}
+
+.center-text {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
+<!..end...>
+
+
+.hero {
+  height: calc(80vh - 70px); /* navbar height */
+  margin-top: 10px;
+}
+
+#contact textarea {
+  padding-top: 10px;
+}
+#contact ::placeholder {
+  color: #777;
+  font-size: 14px;
+}
+
+#contact {
+  padding-top: 40px; /* reduce if needed */
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  box-sizing: border-box;
+}
+
+#contact textarea {
+  height: 180px;
+  resize: vertical;
+  padding-top: 10px;
+}
+
+#contact {
+  width: 100%;
+  padding: 40px 20px;   /* REDUCED = moves text up */
+  margin-top: 60px;     /* space below navbar */
+
+  text-align: center;
+  background: #F0FFFF;
+}
+
+#contact h2 {
+  margin-bottom: 10px;
+}
+
+<!...Start form...>
+.contact-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+/* FORM */
+.contact-wrapper form {
+  flex: 1;
+}
+
+/* IMAGE */
+.contact-image {
+  flex: 1;
+}
+
+.contact-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* optional */
+}
+
+@media (max-width: 900px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
+}
+
+.contact-image img {
+  object-fit: cover;
+  height: 100%;
+}
+
+
+/* CONTACT LAYOUT FIX */
+#contact .contact-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex !important;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* FORM */
+#contact form {
+  flex: 1;
+}
+
+/* IMAGE (SMALL & RIGHT) */
+#contact .contact-image {
+  flex: 0 0 260px; /* fixed small width */
+}
+
+#contact .contact-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+/* MOBILE: STACK */
+@media (max-width: 900px) {
+  #contact .contact-wrapper {
+    flex-direction: column;
+  }
+
+  #contact .contact-image {
+    flex: none;
+    width: 100%;
+  }
+}
+
+#contact .contact-image {
+  flex: 0 0 300px;
+}
+
+<!...end contact form...>
+
+
+
+<!...Text box from here...>
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+#carousel-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-text {
+  position: absolute;
+  bottom: 20px;          /* safer than center */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: rgba(0,0,0,0.5);
+  padding: 8px 14px;
+  border-radius: 4px;
+  pointer-events: none; /* prevents button issues */
+}
+
+.carousel-text {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+
+#carousel-img {
+  transition: opacity 0.4s ease;
+}
+
+.carousel-text {
+  font-size: clamp(1rem, 3vw, 1.8rem);
+}
+
+.carousel-text {
+  /* styles */
+}
+
+.carousel-text {
+  background: black !important;
+  color: white !important;
+}
+.carousel .carousel-text {
+  z-index: 10;
+}
+
+
+.image-wrapper {
+  position: relative;
+}
+
+.carousel-text {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 8px 14px;
+  font-size: 1.2rem;
+  z-index: 5;
+}
+
+@media (max-width: 600px) {
+  .image-wrapper {
+    width: 90%;   /* smaller width on mobile */
+    height: 200px; /* smaller height */
+  }
+}
+
+}
+
+.carousel .image-wrapper {
+  position: relative;
+}
+
+.carousel .image-wrapper .carousel-text {
+  position: absolute !important;
+  bottom: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+
+  color: white;
+  background: rgba(0,0,0,0.6);
+  padding: 8px 16px;
+  font-size: 1.2rem;
+  z-index: 999;
+}
+
+.image-wrapper {
+  width: 550px;
+  height: 360px;
+  position: relative;
+  overflow: hidden;
+}
+
+#carousel-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+<!...End text box...>

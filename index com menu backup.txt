@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Affordable Painter</title>
+
+
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+       <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Responsive Landing Page</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #222;
+            color: white;
+            flex-wrap: wrap;
+        }
+
+        /* MENU */
+        nav {
+            display: flex;
+            gap: 12px;
+        }
+
+        nav button {
+            padding: 10px 16px;
+            border: none;
+            background-color: #444;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        nav button:hover {
+            background-color: #666;
+            transform: translateY(-2px);
+        }
+
+        /* LOGO */
+        .logo {
+            width: 120px;
+            height: 40px;
+            background-color: #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* ===== IMAGE GRID ===== */
+        .image-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .image-box {
+            position: relative;
+            height: 220px;
+            background-color: #ccc;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        /* TEXT OVER IMAGE */
+        .image-text {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background-color: rgba(0,0,0,0.65);
+            color: white;
+            padding: 8px 12px;
+            font-size: 14px;
+            transition: opacity 0.3s ease;
+        }
+
+        /* HOVER EFFECT */
+        .image-box:hover img {
+            transform: scale(1.08);
+        }
+
+        .image-box:hover .image-text {
+            opacity: 0.85;
+        }
+
+        /* ===== TABLET ===== */
+        @media (max-width: 900px) {
+            .image-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .image-section {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+
+            .image-box {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <!-- MENU BAR -->
+    <nav>
+        <button>Home</button>
+        <button>Server</button>
+        <button>Contact</button>
+    </nav>
+
+    <!-- LOGO SPACE -->
+ <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/ce33f2102795941.5f3e946eb2e00.jpg" width="100%" height="100" alt="Description">.
+  </div>
+          </div>
+</header>
+<h1>3xpainting</h1>
+<p>Quality you can trust, prices you’ll love.</p>
+
+
+
+</div>
+
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-container">
+
+      <p><div class="middle-text">
+        <h1>Affordable Painter</h1>
+        <class="subtitle">
+          Need Your Home Painted? Get a Fresh New Look!<br>
+         👋
+We are professional interior & exterior painting with high-quality finishes and fast turnaround.
+<p>✔ Smooth, clean, professional results</p>
+<p>✔ Free color consultation</p>
+<p>✔ We protect your floors, furniture & belongings</p>
+<p>✔ Affordable pricing</p>
+<p>✔ Free estimates — no obligation</p>
+<p>✔ 
+<p>Whether it’s one room, the whole house, or touch-ups, I’ve got you covered.</p>
+
+
+        </p>
+         
+        
+</p> 
+      </div>
+
+
+      <div><div class="hero-image">
+        <img src="feature.jpg" alt="">
+     
+
+
+
+
+    </div>
+  </section>
+
+
+
+
+<!-- CONTENT 2 -->
+<section class="content">
+  <div class="content-container">
+
+    <div class="content-image">
+      <img src="feature1.jpg" alt="">
+    </div>
+
+    <div class="content-text">
+      <h2>New Jersey & Pennsylvania</h2>
+      <p>
+        
+<span style="display: block;">📍 Serving: (All cities in area)</span>
+<span style="display: block;">📆 Available this week</span>
+<span style="display: block;">💬 Send me a message for a free quote!</span>
+
+
+
+
+
+  </div>
+  
+
+</section>
+<section class="carousel">
+  <button onclick="prev()">❮</button>
+
+  <div class="image-wrapper">
+    <img id="carousel-img" src="g1.jpg" alt="">
+    <div class="carousel-text">Before and After</div>
+  </div>
+
+  <button onclick="next()">❯</button>
+</section>
+
+  <button onclick="next()">❯</button>
+</section>
+
+  </div>
+  </div>
+  </div>
+
+
+
+
+<div class="page-section">
+  <section id="contact">
+
+    <!-- LEFT: CONTACT FORM -->
+  <div class="contact-wrapper">
+
+    <form action="https://submit-form.com/4WKjmTdo4">
+<H2>Contact us</h2>
+For an absolutely affordable price. Free quote, no obligation.<label for="name"><p>&nbsp;&nbsp;&nbsp;</p></label>
+
+      <input type="text" id="name" name="name" placeholder="Name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Message" required></textarea>
+
+      <button type="submit">Send</button>
+
+    </form>
+
+    <div class="contact-image">
+      <img src="images/contact-form.png" alt="Painting wall">
+    </div>
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+</section>
+
+<!...ending...>
+
+
+<style>
+    /* Reset default margins */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Main content area */
+    .content {
+        min-height: 90vh; /* Push footer to bottom */
+        padding: 20px;
+    }
+
+    /* Footer bar styling */
+    footer {
+        background-color: #222; /* Dark background */
+        color: white;           /* White text */
+        text-align: center;     /* Center text */
+        padding: 10px 0;        /* Space inside */
+        font-size: 14px;
+        position: fixed;        /* Stays at bottom */
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+</style>
+
+
+<!.. Start....><html>
+<section class="hero">
+  <div class="center-text">
+<h3>Perfectly text space.</h3>
+   <p style="font-size: 20px;">Haven’t we learned from history? A war against Venezuela is a clear mistake</span>
+<span style="display: block;">Haven’t we learned from history? A war against Venezuela is a clear mistake</span>
+<span style="display: block;">Haven’t we learned from history? A war against Venezuela is a clear mistake</span>
+<span style="display: block;">Haven’t we learned from history? A war against Venezuela is a clear mistake</span>
+<span style="display: block;">Haven’t we learned from history? A war against Venezuela is a clear mistake</span>
+<span style="display: block;">Haven’t we learned from history? A war against Venezuela is a clear mistake</span>
+<span style="display: block;">Haven’t we learned from history? A war against Venezuela is a clear mistake</span>
+  </div></p></p>
+</section>
+ <!.. Ending...>
+ 
+
+
+ <script src="jscript.js"></script>
+<!-- Footer bar -->
+<footer>
+    &copy; 2025 All rights reserved.
+
+
+</body>
+
+</html>
+
+</html>
+
