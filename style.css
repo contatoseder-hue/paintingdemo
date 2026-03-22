@@ -13,6 +13,12 @@ body {
   color: #222;
   line-height: 1.6;
   overflow-x: hidden;
+
+  /* ✅ GLOBAL SIDE SPACING */
+  padding: 0 8%;
+
+  opacity: 1 !important;
+  transition: none;
 }
 
 /* ============================= */
@@ -23,7 +29,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 8%;
+  padding: 15px 0;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -72,19 +78,43 @@ body {
 }
 
 /* ============================= */
+/* BRAND HEADER */
+/* ============================= */
+.brand-header {
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.brand-header img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.brand-header h2 {
+  margin-bottom: 5px;
+}
+
+.brand-header p {
+  color: #666;
+}
+
+/* ============================= */
 /* HERO */
 /* ============================= */
 .hero {
   display: flex;
-  gap: 50px;
-  padding: 80px 8%;
+  gap: 150px;
+  padding: 80px 0;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   background: white;
 }
 
+/* ✅ THIS IS THE FIX (ONLY THIS MATTERS) */
 .hero-content {
   flex: 1;
+  max-width: 600px;
+  margin-top: 100px; /* pushes "Affordable Painter" down */
 }
 
 .hero h1 {
@@ -97,8 +127,18 @@ body {
   margin-bottom: 20px;
 }
 
+/* optional extra spacing for your custom class */
+.down-text {
+  margin-top: 10px;
+}
+
 .description {
   color: #666;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .hero-image img {
@@ -114,7 +154,7 @@ body {
 .feature {
   display: flex;
   gap: 50px;
-  padding: 80px 8%;
+  padding: 80px 0;
   align-items: center;
   flex-wrap: wrap;
   background: #f2f2f2;
@@ -139,7 +179,7 @@ body {
 /* POSTS */
 /* ============================= */
 .posts {
-  padding: 80px 8%;
+  padding: 80px 0;
   background: white;
 }
 
@@ -269,7 +309,7 @@ body {
   color: white;
   display: flex;
   gap: 50px;
-  padding: 70px 8%;
+  padding: 70px 0;
   flex-wrap: wrap;
 }
 
@@ -321,38 +361,36 @@ body {
   .column {
     width: 100%;
   }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .post img {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
-
-body {
-  opacity: 1 !important;  /* force visible */
-  transition: none;
-}
+/* ============================= */
+/* EXTRA FIXES */
+/* ============================= */
 #preloader {
-  display: none !important;  /* hide preloader */
+  display: none !important;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.hero-image img, .feature-image img, .post img {
+.hero-image img,
+.feature-image img,
+.post img {
   transform: scale(0.95);
   opacity: 0;
   transition: transform 0.6s ease, opacity 0.6s ease;
 }
 
-.hero-image img.visible, .feature-image img.visible, .post img.visible {
+.hero-image img.visible,
+.feature-image img.visible,
+.post img.visible {
   transform: scale(1);
   opacity: 1;
 }
