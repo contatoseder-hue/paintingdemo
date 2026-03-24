@@ -1,6 +1,19 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Affordable Painter</title>
@@ -283,15 +296,16 @@ img.hover-shadow { transition: 0.3s; }
 
 
 
-  <div class="hero-image">
-    <img src="best-painter-in-nj.jpg" height="560"  width="630" alt="Painter Work" loading="lazy">
+  <div class="hero-image"> 
+
+    <img src="painter-in-nj.jpg" height="560"  width="630" alt="Painter Work" loading="lazy">
   </div>
 </section>
 
 <!-- FEATURE SECTION -->
 <section class="feature">
   <div class="feature-image">
-    <img src="images/cheaper-painter.jpg" height="420" alt="Feature Image">
+    <img src="images/cheaper-painter.jpg" height="500" width="460" alt="Feature Image">
   </div>
 
   <div class="feature-text">
@@ -312,10 +326,25 @@ img.hover-shadow { transition: 0.3s; }
 <!-- POSTS SECTION -->
 <section class="posts">
 
-  <h2> Why Choose 3XPainting?</h2>
-  <p>You get true value for your money without compromising quality.</p>
-  <p>We protect your belongings and treat your home with care and attention every time.</p>
-  <p>We use clean drop sheets and always clean up thoroughly after completing the job.</p>
+<h2>Why Choose 3X Painting?</h2>
+
+<p>You get real value for your money without compromising on quality.</p>
+
+<p>We treat your home with care, protecting your belongings and working with attention to detail every time.</p>
+
+<p>We use clean drop sheets and always leave your space spotless after completing the job.</p>
+
+<ul>
+  <li>No job is too small</li>
+  <li>Rooms, kitchens, and touch-ups</li>
+  <li>Drywall repair</li>
+  <li>Interior and exterior painting</li>
+  <li>Cabinet restoration</li>
+</ul>
+
+<div id="services">
+
+<p><strong>Contact us today for a free quote.</strong></p>
 
   <h2 class="section-title">Apartments</h2>
 
@@ -375,7 +404,91 @@ img.hover-shadow { transition: 0.3s; }
   </div>
 </div>
 
+
+
+
+
+
+<!...contacts...>
+
+
+<div class="contact-box">
+  <p class="contact-title">Free Quotes Available</p>
+
+<p class="phone">
+  📞 Call or Text: <a id="phoneLink"></a>
+</p>
+
+<script>
+  const num = "862" + "215" + "5740";
+  const link = document.getElementById("phoneLink");
+  link.href = "tel:" + num;
+  link.textContent = "(862) 215-5740";
+</script>
+
+  <div class="contact-buttons">
+    <a href="https://wa.me/12011234567" target="_blank" class="btn whatsapp">💬 WhatsApp</a>
+    <a href="https://t.me/yourusername" target="_blank" class="btn telegram">💬 Telegram</a>
+    <a href="mailto:you@example.com" class="btn email">✉️ Email</a>
+  </div>
+</div>
+
+<style>
+.contact-box {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #ddd;
+  font-family: Arial, sans-serif;
+}
+
+.contact-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.phone a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.contact-buttons {
+  margin-top: 15px;
+}
+
+.btn {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.whatsapp { background-color: #25D366; }
+.telegram { background-color: #0088cc; }
+.email { background-color: #444; }
+
+.btn:hover {
+  opacity: 0.85;
+}
+</style>
+
+
+
+
+
+
+
+
+
 <!-- FOOTER -->
+
+
+
 <footer class="footer">
   <div class="footer-column">
     <h3>Recommended Paint & Colors</h3>
@@ -422,6 +535,9 @@ function showSlides(n) {
 }
 </script>
 
+<div id="contact-form">
+  <!-- your contact content -->
+</div>
 <script src="script.js" defer></script>
 
 </body>
