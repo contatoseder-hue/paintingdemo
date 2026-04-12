@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -243,18 +244,109 @@ img.hover-shadow { transition: 0.3s; }
 <body>
 
 <!-- TOP BAR -->
-<div class="topbar">
-  <a href="#" class="logo"></a>
-  <div class="right">
-    <a href="index.html">Home</a>
+
+<style>
+
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+/* Logo */
+.logo {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+  padding: 14px 0;
+}
+
+/* Links container */
+#myLinks {
+  display: flex;
+}
+
+/* Links */
+#myLinks a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+#myLinks a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Hamburger button */
+.icon {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+@media (max-width: 768px) {
+
+  .icon {
+    display: block;
+  }
+
+  #myLinks {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #333;
+  }
+
+  #myLinks a {
+    border-top: 1px solid #444;
+  }
+
+  #myLinks.active {
+    display: flex;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topnav">
+  <a href="#" class="logo">3X Painting</a>
+
+  <div id="myLinks">
+    <a href="#">Home</a>
     <a href="services.html">Services</a>
     <a href="about.html">About</a>
+    <a href="privacy.html">Privacy</a>
     <a href="#contact-form">Contact</a>
-   <a href="privacy.html" class="privacy-link">Privacy</a>
-    </div>
   </div>
+
+  <span class="icon" onclick="toggleMenu()">☰</span>
 </div>
 
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("myLinks");
+  menu.classList.toggle("active");
+}
+</script>
 <!-- Logo -->
 <img src="icon3-Picsart-BackgroundRemover.jpg" alt="Logo" width="150" height="100" loading="lazy">
 
@@ -278,6 +370,7 @@ img.hover-shadow { transition: 0.3s; }
     <p>✔ Affordable pricing</p>
     <p>✔ Free estimates — no obligation</p>
 
+
     <p class="description">
       Whether it’s one room, the whole house, or touch-ups, I’ve got you covered.
     </p>
@@ -296,15 +389,16 @@ img.hover-shadow { transition: 0.3s; }
 
   <div class="hero-image"> 
 
-    <img src="painter-in-nj.jpg" height="560"  width="630" alt="Painter Work" loading="lazy">
+    <img src="painter-in-nj.jpg" height="655"  width="930" alt="Painter Work" loading="lazy">
   </div>
 </section>
 
-<!-- FEATURE SECTION -->
-<section class="feature">
-  <div class="feature-image">
-    <img src="images/cheaper-painter.jpg" height="500" width="460" alt="Feature Image">
-  </div>
+<!-- FEATURE SECTION --><div class="hero">
+  <img src="images/cheaper-painter.jpg" height="800" width="860" alt="Feature Image">
+
+</div>
+
+   
 
   <div class="feature-text">
     <h2>Sheetrock Services — Precision, Strength & Perfectly Smooth Walls</h2>
@@ -493,7 +587,38 @@ img.hover-shadow { transition: 0.3s; }
 
 
 <footer class="footer">
-  <div class="footer-column">
+
+
+<div class="left">
+<h1>3Xpainting</h1>
+📍 Address:
+<li>36 Barbara St</li>
+<li>Newark NJ 07107</li>
+
+   <p class="phone">
+    📞 Call or Text: <a id="phoneLink"></a>
+  </p>
+<p> Locations</p>
+<p>New Jersey & surrounding areas
+Lehigh Valley, PA</p>
+  <p class="contact-title">🆓 Free Estimates Available</p>
+
+<p>🕒 Hours:</p>
+<p>Monday-Saturday: 9am-6pm Sundays: Closed</p>
+
+  <div class="contact-buttons">
+    <a href="https://wa.me/8622155740" target="_blank" class="btn whatsapp">💬 WhatsApp</a>
+    <a href="https://t.me/ecunha09" target="_blank" class="btn telegram">💬 Telegram</a>
+    <a href="mailto:3xpaintingservices@gmail.com" class="btn email">✉️ Email</a>
+  </div>
+
+<a href="privacy.html"_blank">Privacy Policy</a>
+
+
+
+
+
+
     <h3>Recommended Paint & Colors</h3>
  <p>We trust these professional-grade paints and tools for smooth, long-lasting results.</p>
     <a href="https://www.amazon.com/s?k=interior+paint+benjamin+moore&crid=3BU5HKU6U1EJ7&sprefix=Interior+Paint+bemjamin+%2Caps%2C89&ref=nb_sb_ss_p13n-expert-pd-ops-ranker_1_24" 
@@ -513,32 +638,128 @@ img.hover-shadow { transition: 0.3s; }
     </a>
   </div>
 
+
+
+
+
+
 <!...contact form start...>
 
-<div class="contact-box">
-<h1>3Xpainting</h1>
-📍 Address:
-<li>36 Barbara St</li>
-<li>Newark NJ 07107</li>
+  <div class="contact-right">
 
-   <p class="phone">
-    📞 Call or Text: <a id="phoneLink"></a>
-  </p>
-<p> Locations</p>
-<p>New Jersey & surrounding areas
-Lehigh Valley, PA</p>
-  <p class="contact-title">🆓 Free Estimates Available</p>
 
-<p>H🕒 Hours:</p>
-<p>Monday-Saturday: 9am-6pm Sundays: Closed</p>
+<script src="scripts.js"></script>
 
-  <div class="contact-buttons">
-    <a href="https://wa.me/8622155740" target="_blank" class="btn whatsapp">💬 WhatsApp</a>
-    <a href="https://t.me/ecunha09" target="_blank" class="btn telegram">💬 Telegram</a>
-    <a href="mailto:3xpainting@gmail.com" class="btn email">✉️ Email</a>
-  </div>
+ <div id="contact-form">
 
-<a href="privacy.html"_blank">Privacy Policy</a>
+<!-- CONTACT FORM -->
+<div class="contact-form">
+  <h2>Get a Free Quote</h2>
+
+  <form action="https://formspree.io/f/xgorwygy" method="post">
+
+    <!-- Name -->
+    <label for="first-name">First Name *</label>
+    <input type="text" id="first-name" name="first_name" required>
+
+    <label for="last-name">Last Name (optional)</label>
+    <input type="text" id="last-name" name="last_name">
+
+    <!-- Contact Info -->
+    <label for="phone">Phone Number *</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required>
+
+  <label for="zip">Zip Code *</label>
+    <input type="text" id="zip" name="zip" required>
+
+    <!-- Job Details -->
+    <label for="subject">Subject *</label>
+    <input type="text" id="subject" name="subject" required>
+
+  
+
+    <!-- Message -->
+    <label for="message">Project Details *</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <!-- Submit -->
+    <button type="submit">Request Quote</button>
+
+  </form>
+</div>
+
+<!-- BASIC STYLING -->
+<style>
+.contact-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  background: #c97c3a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #a9652f;
+}
+</style>
+<!...Contact f
+</div>
+
+  <link rel="stylesheet" href="styl.css">
+
+</div>
+<!...contact form end...>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!...Ending...>
+
+
 
 <script>
   const num = "862" + "215" + "5740";
