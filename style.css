@@ -25,18 +25,15 @@ body {
 /* NAVBAR */
 /* ============================= */
 .topbar {
-  background: #333;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 0;
-  position: sticky;
+  background-color: #ffffff !important;
+  position: sticky; /* or fixed if you're using that */
   top: 0;
-  z-index: 1000;
+  z-index: 1000; /* keeps it above images */
+}
 }
 
 .topbar a {
-  color: white;
+  color: black;
   text-decoration: none;
   margin-left: 20px;
   transition: 0.3s ease;
@@ -45,7 +42,9 @@ body {
 .topbar a:hover {
   color: #d08a3c;
 }
-
+.topbar a {
+  color: #222; /* dark text */
+}
 /* ============================= */
 /* BUTTONS */
 /* ============================= */
@@ -414,3 +413,147 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+
+
+
+
+
+
+
+
+
+
+.contact-box {
+  text-align: left;   /* force left alignment */
+}
+
+.contact-box p {
+  margin: 5px 0;      /* remove uneven spacing */
+}
+
+.contact-buttons {
+  margin-top: 10px;
+}
+
+.contact-buttons a {
+  display: inline-block;
+
+  margin-right: 8px;  /* space between buttons */
+
+
+
+
+
+
+
+
+.trust-section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+.trust-section h2 {
+  margin-bottom: 10px;
+}
+
+.trust-section ul {
+  padding-left: 20px;
+  margin: 15px 0;
+}
+
+.trust-section li {
+  margin-bottom: 8px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .topbar .right {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .topbar a {
+    width: 100%;
+    padding: 12px 10px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.menu-toggle {
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+.form-wrapper {
+  max-width: 600px;
+  margin: 40px auto; /* THIS centers it */
+}
+
+
+
+.contact-section {
+  display: flex;
+  gap: 25px;
+}
+
+.contact-left {
+  flex: 1.2;
+}
+
+.contact-right {
+  flex: 1;
+}
+
+
+
