@@ -555,5 +555,13 @@ img {
   flex: 1;
 }
 
+.feature-list {
+  list-style: none;
+  padding-left: 0;
+}
 
-
+.feature-list li::before {
+  content: "✔ ";
+  color: #c97c3a;
+  font-weight: bold;
+}
