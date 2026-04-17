@@ -1,249 +1,13 @@
 
 
 
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-793759339"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-793759339');
-</script>
-
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Affordable Painter</title>
-
-<!-- Performance -->
-
-
-<!-- Critical Styles -->
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fff;
-  color: #222;
-  line-height: 1.6;
-}
-
-/* Top Bar */
-.topbar {
-  background-color: #333;
-  overflow: hidden;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
-.topbar .logo {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
-}
-.topbar a {
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-.topbar a:hover {
-  background-color: #575757;
-  border-radius: 4px;
-}
-.topbar .right {
-  display: flex;
-  align-items: center;
-}
-.search-box {
-  display: flex;
-  align-items: center;
-}
-.search-box input {
-  padding: 6px;
-  border: none;
-  border-radius: 4px 0 0 4px;
-  outline: none;
-}
-.search-box button {
-  padding: 6px 10px;
-  border: none;
-  background: #ff9800;
-  color: white;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-}
-.search-box button:hover {
-  background: #e68900;
-}
-@media screen and (max-width: 600px) {
-  .topbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .topbar a {
-    display: block;
-    width: 100%;
-  }
-  .search-box {
-    width: 100%;
-    margin-top: 10px;
-  }
-  .search-box input {
-    flex: 1;
-    width: 80%;
-  }
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  background: #c97c3a;
-  color: white;
-  padding: 10px 22px;
-  text-decoration: none;
-  border-radius: 25px;
-  margin-top: 15px;
-}
-.btn.secondary {
-  background: #b46a2f;
-}
-.btn.center {
-  display: block;
-  width: fit-content;
-  margin: 40px auto 0;
-}
-
-/* Hero */
-.hero {
-  display: flex;
-  gap: 40px;
-  padding: 60px 8%;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.hero-content {
-  flex: 1;
-}
-.hero h1 {
-  font-size: 3rem;
-}
-.subtitle {
-  font-size: 1.2rem;
-  margin: 15px 0;
-}
-.description {
-  color: #666;
-}
-.hero-image img {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 6px;
-}
-
-/* Feature Section */
-.feature {
-  display: flex;
-  gap: 40px;
-  padding: 60px 8%;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.feature-image img {
-  width: 100%;
-  max-width: 450px;
-  border-radius: 6px;
-}
-.feature-text {
-  flex: 1;
-}
-
-/* Posts Section */
-.posts {
-  padding: 60px 8%;
-}
-.section-title {
-  font-size: 2rem;
-  margin-bottom: 40px;
-}
-.post {
-  display: flex;
-  gap: 25px;
-  margin-bottom: 30px;
-  align-items: center;
-}
-.post img {
-  width: 180px;
-  border-radius: 6px;
-}
-.post-text h3 {
-  margin-bottom: 8px;
-}
-
-/* Gallery Lightbox */
-.row > .column { padding: 0 8px; float: left; width: 25%; }
-.row:after { content: ""; display: table; clear: both; }
-.modal { display: none; position: fixed; z-index: 1; padding-top: 100px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: black; }
-.modal-content { position: relative; background-color: #000000; margin: auto; padding: 0; width: 90%; max-width: 1200px; }
-.close { color: white; position: absolute; top: 10px; right: 25px; font-size: 35px; font-weight: bold; }
-.close:hover, .close:focus { color: #999; text-decoration: none; cursor: pointer; }
-.mySlides { display: none; }
-.prev, .next { cursor: pointer; position: absolute; top: 50%; width: auto; padding: 16px; margin-top: -50px; color: white; font-weight: bold; font-size: 20px; transition: 0.6s ease; border-radius: 0 3px 3px 0; user-select: none; -webkit-user-select: none; }
-.next { right: 0; border-radius: 3px 0 0 3px; }
-.prev:hover, .next:hover { background-color: rgba(0, 0, 0, 0.8); }
-.numbertext { color: #f2f2f2; font-size: 12px; padding: 8px 12px; position: absolute; top: 0; }
-.caption-container { text-align: center; background-color: black; padding: 2px 16px; color: white; }
-img.demo { opacity: 0.6; }
-.active, .demo:hover { opacity: 1; }
-img.hover-shadow { transition: 0.3s; }
-.hover-shadow:hover { box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19); }
-.column img { width: 100%; height: 220px; object-fit: cover; display: block; }
-@media (max-width: 900px) { .column { width: 50%; } .column img { height: 200px; } }
-@media (max-width: 500px) { .column { width: 100%; } .column img { height: 180px; } }
-.mySlides img { width: 100%; height: auto; max-height: 60vh; object-fit: contain; }
-
-/* Footer */
-.footer {
-  background: #222;
-  color: white;
-  display: flex;
-  gap: 40px;
-  padding: 50px 8%;
-  flex-wrap: wrap;
-}
-.footer-column { flex: 1; }
-.footer input, .footer textarea { width: 100%; padding: 10px; margin-top: 10px; border: none; border-radius: 4px; }
-.footer textarea { height: 80px; }
-
-/* Footer image fix */
-.footer-column img.rollover-img {
-  width: 200px;
-  height: auto;
-  display: block;
-  margin-top: 15px;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero, .feature, .post { flex-direction: column; text-align: center; }
-  .post img { width: 100%; max-width: 300px; }
-}
-</style>
-
-<link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<!-- TOP BAR -->
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="container">
 <style>
 
 /* ============================= */
@@ -324,6 +88,10 @@ body {
 </style>
 </head>
 
+
+
+
+
 <body>
 
 <div class="topnav">
@@ -333,8 +101,8 @@ body {
     <a href="#">Home</a>
     <a href="services.html">Services</a>
     <a href="about.html">About</a>
-    <a href="privacy.html">Privacy</a>
-    <a href="#contact-form">Contact</a>
+ <a href="privacy.html">Privacy</a>
+    <a href="contact-form">Contact Us</a>
   </div>
 
   <span class="icon" onclick="toggleMenu()">☰</span>
@@ -346,22 +114,50 @@ function toggleMenu() {
   menu.classList.toggle("active");
 }
 </script>
-<!-- Logo -->
-<img src="icon3-Picsart-BackgroundRemover.jpg" alt="Logo" width="150" height="100" loading="lazy">
 
-<h2>3XPAINTING & RENOVATIONS</h2>
-<p>Quality you can trust, prices you’ll love.</p>
-
-<!-- HERO -->
-
-<section class="right">
-  <div class="hero-content">
+</body>
+</html>
 
 
 
-    <h1>Affordable Painter</h1>
-   <p class="down-text">
-      Need Your Home Painted? Get a Fresh New Look as soon as next week!
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dinner is Done</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+
+      <div class="logo-icon"></div>
+<a href="index.html">
+  <img src="icon3-Picsart-BackgroundRemover.jpg" height="120" width="200" alt="3X Painting Logo">
+</a>
+      <p><span>🖌️</span></p>
+    </div>
+
+    
+
+  </header>
+<h2 style="margin-left: 65px;">3XPAINTING & RENOVATIONS</h2>
+<p style="margin-left: 65px;">Quality you can trust, prices you’ll love.</p>
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-text fade-in">
+      <h2>Affordable Painter</h2>
+    Need Your Home Painted? Get a Fresh New Look as soon as next week!
     </p>
     <p>✔ Smooth, clean, professional results.</p>
     <p>✔ Free color consultation.</p>
@@ -369,64 +165,39 @@ function toggleMenu() {
     <p>✔ Affordable pricing</p>
     <p>✔ Free estimates — no obligation</p>
 
-
-    <p class="description">
+    <p 
       Whether it’s one room, the whole house, or touch-ups, I’ve got you covered.
     </p>
 
+      <a href="https://t.me/ecunha09" target="_blank" class="btn center">Chat on Telegram</a>
+
+    </div>
+
+    <div class="hero-image fade-in">
+      <img src="smooth-wall.png" height="450" width="350"  alt="Hero">
+    </div>
+
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content">
+
+    <!-- LEFT SIDE -->
+    <div class="left-images fade-in">
+
+      <!-- MAIN IMAGE -->
+     <img src="smooth-walls.png" class="main-img">
 
 
-
-
-    <a href="https://wa.me/18622155740" target="_blank" class="btn">Chat On WhatsApp</a>
-  </div>
-
-
-
-
-
-
-  <div class="hero-image"> 
-
-    <img src="painter-in-nj.jpg" height="655"  width="930" alt="Painter Work" loading="lazy">
-  </div>
-</section>
-
-<!-- FEATURE SECTION --><div class="hero">
-  <img src="images/cheaper-painter.jpg" height="800" width="860" alt="Feature Image">
-
-</div>
-
-   
-
-  <div class="feature-text">
-    <h2>Sheetrock Services — Precision, Strength & Perfectly Smooth Walls</h2>
-    <p>When it comes to Sheetrock, details matter — and that’s where our expertise stands out.</p>
-    <p>We provide professional Sheetrock installation, repair, taping, and finishing with precision that ensures your walls look flawless every time.</p>
-    <ul>
-      <li>Clean, accurate installation with straight lines and solid structure</li>
-      <li>Seamless taping and joint finishing for perfectly smooth surfaces</li>
-      <li>Fast, reliable repairs for cracks, dents, water damage, or uneven areas</li>
-      <li>Paint-ready results that elevate the overall quality of your space</li>
-    </ul>
-    <a href="mailto:3xpaintingservices@gmail.com" class="btn secondary">Email us</a>
-  </div>
-...
-</section>
-
-<!-- POSTS SECTION -->
-<section class="posts">
-
-<section class="trust-section">
-
-  <h2>Why Choose Us</h2>
-
-  <p>
+      <!-- SMALL ITEM 1 -->
+      <div class="small-item">
+        <img src="g1.jpg" height="250" width="350"  >
+        <div class="small-text">
+           <h2>Why Choose Us</h2>
+           <p>
     We focus on delivering clean, reliable, and detail-oriented painting work for every project,
     with a strong commitment to customer satisfaction.
-  </p>
-
-  <ul>
+  </p>  <ul>
     <li>✔ Careful surface preparation for long-lasting results</li>
     <li>✔ Clean and detail-focused work</li>
     <li>✔ Clear communication from start to finish</li>
@@ -434,236 +205,449 @@ function toggleMenu() {
     <li>✔ Interior and exterior residential painting</li>
   </ul>
 
-  <h3>Our Approach</h3>
 
-  <p>
-    Every project is handled with the same priority: a quality finish and respect for your space.
-    We take the time to do the job properly instead of rushing through it.
-  </p>
+        </div>
+      </div>
 
-  <h3>Getting Started</h3>
+      <!-- SMALL ITEM 2 -->
+      <div class="small-item">
+        <img src="smaill-repair.png" height="250" width="350"  >
+        <div class="small-text">
+          <h3>Our Approach</h3>
+          <p> Every project is handled with the same priority: a quality finish and respect for your space.
+    We take the time to do the job properly instead of rushing through it.</p>
+        </div>
+      </div>
 
-  <p>
-    We are currently accepting new clients and would be happy to provide a free estimate.
-    Contact us by phone or message to schedule your quote.
-  </p>
-
-</section>
-
-<div id="services">
-
+      <!-- SMALL ITEM 3 -->
+      <div class="small-item">
+        <img src="room-painting.jpg" height="550" width="350" >
+        <div class="small-text">
+           <h3>Getting Started</h3>
+          <p>  We are currently accepting new clients and would be happy to provide a free estimate.
+    Contact us by phone or message to schedule your quote.</p>
 <p><strong>Contact us today for a free quote.</strong></p>
+  <a href="mailto:3xpaintingservices@gmail.com" class="btn btn-primary btn-sm email">✉️ Email</a>
+        </div>
+      </div>
 
-  <h2 class="section-title">Apartment Painting & Small Jobs</h2>
+    </div>
 
-<div class="post">
+    <!-- RIGHT SIDE -->
+    <div class="content-text fade-in">
+   <h1>Sheetrock Services — Precision, Strength & Perfectly Smooth Walls</h1>
 
-  <img src="smaill-repair.png" alt="Post Image">
-  <div class="post-text">
+<p>
+When it comes to Sheetrock, details matter — and that’s where our expertise stands out.
+</p>
 
+<p>
+We provide professional Sheetrock installation, repair, taping, and finishing with precision that ensures your walls look flawless every time.
+</p>
 
-    <h3>Smaller surface area.</h3>
-<p>Need a quick refresh? We specialize in small projects<p> with the same <p>attention to detail as full-home jobs.</p>
-
-<ul class="feature-list">
-  <li>Single rooms, kitchens, and touch-ups</li>
-  <li>Fast drywall repairs and patching</li>
-  <li>Clean, precise paint touch-ups</li>
-
-   <p>Perfect for apartments, rentals, or quick upgrades.</p>
+<ul>
+  <li>Clean, accurate installation with straight lines and solid structure</li>
+  <li>Seamless taping and joint finishing for perfectly smooth surfaces</li>
+  <li>Fast, reliable repairs for cracks, dents, water damage, or uneven areas</li>
+  <li>Paint-ready results that elevate the overall quality of your space</li>
 </ul>
 
+<p style="margin-top:20px;"><strong>We also offer:</strong></p>
 
-  </div>
-</div>
-...
-
-
-  <div class="post">
-    <img src="g1.jpg" alt="Post Image">
-    <div class="post-text">
-      <h3>Fast Small Wall Repairs</h3>
-      <p>Quick sheetrock patching and seamless paint touch-ups to restore your apartment walls like new.</p>
+<ul>
+  <li>Professional installation for new walls, ceilings, and renovations</li>
+  <li>Strong, durable finishes built to last for years</li>
+  <li>Careful measurement and precise cuts for perfect alignment</li>
+  <li>Complete drywall solutions for homes, apartments, and small jobs</li>
+  <li>Quick turnaround with minimal disruption to your space</li>
+  <li>Clean, respectful work — we protect your floors and furniture</li>
+ <p style="margin-top:20px; font-weight:bold;">
+Get a free estimate today — fast response guaranteed.
+<a href="https://wa.me/18622155740" class="btn">Get a Free Estimate</a>
+</p>
+</ul>
     </div>
+
+  </section>
+
+
+
+
+
+<div class="topbar"></div>
+ <h2 class="section-title">Apartment Painting & Small Jobs</h2>
+
+See photos before & after
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+<body>
+
+<h2 style="text-align:center">Before & After Gallery</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painter.jpg" style="width:100%" height="230"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
   </div>
-
-  <div class="post">
-    <img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painter.jpg" alt="Post Image">
-    <div class="post-text">
-      <h3>Professional Apartment Touch-Ups</h3>
-      <p>From minor drywall damage to fresh paint, we handle small repairs with clean, precise results.</p>
-    </div>
+  <div class="column">
+    <img src="best-painters.jpg" style="width:100%" height="230"  onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
   </div>
-
-  <a href="https://t.me/ecunha09" target="_blank" class="btn center">Chat on Telegram</a>
-
-
-
-  <h1 class="gallery-title"> See before & after photos</h1>
-</section>
-
-<!-- GALLERY SECTION --> 
-<div class="row footer-gallery">
-  <div class="column"><img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painter.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"></div>
-  <div class="column"><img src="t3.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow"></div>
-  <div class="column"><img src="t2.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow"></div>
-  <div class="column"><img src="t.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow"></div>
+  <div class="column">
+    <img src="t2.jpg" style="width:100%" height="230" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="t3.jpg" style="width:100%" height="230"  onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
 </div>
 
 <div id="myModal" class="modal">
   <span class="close cursor" onclick="closeModal()">&times;</span>
   <div class="modal-content">
-    <div class="mySlides"><div class="numbertext">1 / 4</div><img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painters.jpg" style="width:100%"></div>
-    <div class="mySlides"><div class="numbertext">2 / 4</div><img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/smooth-walls.png" style="width:100%"></div>
-    <div class="mySlides"><div class="numbertext">3 / 4</div><img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/smooth-wall.png" style="width:100%"></div>
-    <div class="mySlides"><div class="numbertext">4 / 4</div><img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painter.jpg" style="width:100%"></div>
+
+  <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/best-painter.jpg" style:="width="750" height="950">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painters.jpg" style:="width="750" height="950">
+    </div>
+<div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="img/painter-near-me.jpg" style:="width="750" height="950">
+
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="img/merda.JPG" style="width:="750" height="950">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="img/IMG_4720.JPG" style:="width="750" height="950">
+    </div>
+   <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="img/fix-deck.JPG" style="width="750" height="950">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="img/IMG_4727.JPG" style="width="750" height="950">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="img/IMG_4728.JPG" style:="width="750" height="950">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painter.jpg" style:="width="750" height="950">
+    </div>
+
+<div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+  <img src="img\painter-near-me.JPG" class="main-img">
+    </div>
+
+
+<div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="img/benjamin.jpg" style:="width="750" height="950">
+    </div>
+
+
+<div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="img/IMG_4726.JPG" style:="width="750" height="950">
+    </div>
+
+    
     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
-    <div class="caption-container"><p id="caption"></p></div>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="kitchen-repair1.jpg" style="width:100%" height="350"  onclick="currentSlide(1)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="kitchen-repairs.jpg" style="width:100%" height="350"  onclick="currentSlide(2)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="t.jpg" style="width:100%"  height="350"  onclick="currentSlide(3)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="room-painting.jpg" style="width:100%"  height="350"  onclick="currentSlide(4)" alt="s">
+
+
+    </div>
   </div>
 </div>
 
-
-
-
-
-
-<!...contacts...>
-
-
-<!...contac and address...>
-
-
-
-<style>
-.contact-box {
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-  border-top: 1px solid #ddd;
-  font-family: Arial, sans-serif;
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
 }
 
-.contact-title {
-  font-size: 18px;
-  margin-bottom: 10px;
-  font-weight: bold;
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
 }
 
-.phone a {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-.contact-buttons {
-  margin-top: 15px;
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-.btn {
-  display: inline-block;
-  margin: 5px;
-  padding: 10px 15px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: #fff;
-  font-size: 14px;
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
 }
-
-.whatsapp { background-color: #25D366; }
-.telegram { background-color: #0088cc; }
-.email { background-color: #444; }
-
-.btn:hover {
-  opacity: 0.85;
-}
-</style>
-
-
-
-
-
-
-
-
-<!-- FOOTER -->
-
-
-
-<footer class="footer">
-
-
-<div class="left">
-<h1>3Xpainting</h1>
-📍 Address:
-<li>36 Barbara St</li>
-<li>Newark NJ 07107</li>
-
-   <p class="phone">
-    📞 Call or Text: <a id="phoneLink"></a>
-  </p>
-<p> Locations</p>
-<p>New Jersey & surrounding areas
-Lehigh Valley, PA</p>
-  <p class="contact-title">🆓 Free Estimates Available</p>
-
-<p>🕒 Hours:</p>
-<p>Monday-Saturday: 9am-6pm Sundays: Closed</p>
-
-  <div class="contact-buttons">
-    <a href="https://wa.me/8622155740" target="_blank" class="btn whatsapp">💬 WhatsApp</a>
-    <a href="https://t.me/ecunha09" target="_blank" class="btn telegram">💬 Telegram</a>
-    <a href="mailto:3xpaintingservices@gmail.com" class="btn email">✉️ Email</a>
-  </div>
-
-<a href="privacy.html"_blank">Privacy Policy</a>
-
-
-
-
-
-
-    <h3>Recommended Paint & Colors</h3>
- <p>We trust these professional-grade paints and tools for smooth, long-lasting results.</p>
-    <a href="https://www.amazon.com/s?k=interior+paint+benjamin+moore&crid=3BU5HKU6U1EJ7&sprefix=Interior+Paint+bemjamin+%2Caps%2C89&ref=nb_sb_ss_p13n-expert-pd-ops-ranker_1_24" 
-   target="_blank" 
-   rel="noopener noreferrer">
-  <img src="benjamin-removebg-preview.png" class="hover-shadow"
-       height="230" 
-       width="180" 
-       alt="Recommended Paint" 
-       style="border: 2px solid #fff; cursor: pointer;">
-</a>
-    </a>
-
-
-
-<p>View Recommended Paint</p>
-    </a>
-  </div>
-
-
-
-
-
-
-<!...contact form start...>
-
-
-
-  <div class="contact-right">
-
-
+</script>
 <script src="scripts.js"></script>
 
  <div id="contact-form">
 
 <!-- CONTACT FORM -->
 
-  <div class="contact-right">
+
+  <link rel="stylesheet" href="style1.css">
+
+<!...end...>
+
+
+
+
+
+
+
+
+<div class="posts-section">
+
+  <div class="post-card">
+<h1>3Xpainting</h1>
+
+<div class="full-section">
+
+  <div class="col">
+    <h3>Contact Info</h3>
+    <p><strong>📞:</strong> (862) 215-5740</p>
+    <p><strong>Location:</strong>  </p>
+    <p>Newark, NJ •Serving surrounding areas & Lehigh valley center</p>
+
+  </div>
+
+  <div class="col">
+    <h3>Get a Free Quote</h3>
+   
+    <p>Give us a call or send an emaill</p>
+  </div>
+
+  <div class="col">
+    <h3>Our Services</h3>
+    <p>Interior Painting</p>
+    <p>Exterior Painting</p>
+    <p>Drywall damage to fresh paint</p>
+    <p>Small Jobs & Repairs</p>
+  </div>
+
+</div>
+  </div>
+
+  <div class="post-card">
+  
+<h3>Need a Quote Fast?</h3>
+
+<p>Call or message us today and get a fast estimate.</p>
+
+<p><strong>📞 (862) 215-5740</strong></p>
+
+<p>Available next week!</p>
+
+  <div class="contact-buttons">
+    <div class="contact-icons">
+  <a href="https://wa.me/8622155740"><img src="whatsapp.png"  alt="WhatsApp"></a>
+  <a href="https://t.me/ecunha09"><img src="telegram.png" alt="Telegram"></a>
+  <a href="mailto:3xpaintingservices@gmail.com"><img src="email.png" height="24" width="20" alt="Email"></a>
+</div>
+  </div>
+
+
+
+  </div>
+
+  <div class="post-card">
+   <!-- CONTACT FORM -->
+
+ <div class="contact-right">
+
+<div class="contact-form">
   <h2>Get a Free Quote</h2>
 
-  <form action="https://formspree.io/f/meevjvyp" method="post">
+  <form action="#" method="post">
 
     <!-- Name -->
     <label for="first-name">First Name *</label>
@@ -742,76 +726,61 @@ Lehigh Valley, PA</p>
   background: #a9652f;
 }
 </style>
-<!...Contact f
+
+
+  </div>
+
+</div>
+  </div>
+
 </div>
 
-  <link rel="stylesheet" href="styl.css">
+<div class="container">
 
-</div>
-<!...contact form end...>
+ <!-- Footer -->
+    <footer>
+        &copy; 2026 My Website. All rights reserved.
+    </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!...Ending...>
-
-
-
-<script>
-  const num = "862" + "215" + "5740";
-  const link = document.getElementById("phoneLink");
-  link.href = "tel:" + num;
-  link.textContent = "(862) 215-5740";
-</script>
-<!...contact forma end...>
-</footer>
-
-
-
-
-</script> 
-
-
-<!-- LIGHTBOX SCRIPT -->
-<script>
-function openModal() { document.getElementById("myModal").style.display = "block"; }
-function closeModal() { document.getElementById("myModal").style.display = "none"; }
-var slideIndex = 1;
-showSlides(slideIndex);
-function plusSlides(n) { showSlides(slideIndex += n); }
-function currentSlide(n) { showSlides(slideIndex = n); }
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) { slideIndex = 1; }
-  if (n < 1) { slideIndex = slides.length; }
-  for (i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
-  for (i = 0; i < dots.length; i++) { dots[i].className = dots[i].className.replace(" active", ""); }
-  slides[slideIndex-1].style.display = "block";
-  if(dots[slideIndex-1]) dots[slideIndex-1].className += " active";
-  if(captionText && dots[slideIndex-1]) captionText.innerHTML = dots[slideIndex-1].alt;
-}
-</script>
-
-
-
-<div id="contact-form">
-  <!-- your contact content -->
-</div>
-<script src="script.js" defer></script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
