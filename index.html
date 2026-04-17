@@ -1,590 +1,750 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-.carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  padding: 120px 20px;
-  width: 100%;
-}
-
-
-
-#contact {
-  width: 100%;
-  padding: 80px 20px;     /* space from top & bottom */
-  box-sizing: border-box;
-}
-
-#contact form {
-  max-width: 500px;
-  margin: 0 auto;        /* centers the form */
-}
 
 
 
 
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div class="container">
+<style>
 
+/* ============================= */
+/* NAVBAR */
+/* ============================= */
 body {
-  font-family: Arial, sans-serif;
-  color: #222;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-/* TOP BAR */
-.top-bar {
-  background: #000;
-  color: #fff;
-  text-align: center;
-  padding: 8px 0;
-  font-size: 0.85rem;
-}
-
-/* NAV */
-.nav {
+.topnav {
+  background-color: #333;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  border-bottom: 1px solid #eee;
+  padding: 0 15px;
 }
 
-.nav ul {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
-}
-
-/* HERO */
-.hero {
-  padding: 140px 20px;
-}
-
-.hero-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  gap: 80px;
-}
-
-.hero-text h1 {
-  font-family: Georgia, serif;
-  font-size: 4rem;
-  margin-bottom: 20px;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 15px;
-}
-
-.small {
-  font-size: 0.9rem;
-  color: #999;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* CONTENT SECTIONS */
-.content {
-  padding: 140px 20px;
-}
-
-.content-container {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  gap: 80px;
-}
-
-.content-text h2 {
-  font-family: Georgia, serif;
-  font-size: 2.6rem;
-  margin-bottom: 20px;
-}
-
-.content-text p {
-  color: #666;
-  line-height: 1.8;
-}
-
-.content-image img {
-  width: 100%;
-  max-width: 550px;
-  height: 360px;
-  object-fit: cover;
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  margin-top: 25px;
-  padding: 12px 30px;
-  background: #d4834a;
-  color: #fff;
-  border-radius: 999px;
-  text-decoration: none;
-}
-
-/* REVERSE */
-.reverse .content-container {
-  flex-direction: row-reverse;
-}
-
-/* CAROUSEL */
-.carousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  padding: 100px 20px;
-  width: 100%;
-}
-
-/* Image container */
-.image-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-/* Carousel image */
-#carousel-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  transition: opacity 0.4s ease;
-}
-
-/* Overlay text */
-.carousel-text {
-  position: absolute;
-  bottom: 20px;          /* position text near bottom */
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0,0,0,0.6);
+/* Logo */
+.logo {
   color: white;
-  font-size: clamp(1rem, 3vw, 1.8rem); /* responsive */
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 5px;
-  text-align: center;
-  z-index: 10;
-  pointer-events: none;   /* so it doesn’t block buttons */
-  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+  font-size: 18px;
+  text-decoration: none;
+  padding: 14px 0;
 }
 
+/* Links container */
+#myLinks {
+  display: flex;
+}
+
+/* Links */
+#myLinks a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+#myLinks a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Hamburger button */
+.icon {
+  display: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: white;
+}
+
+/* ============================= */
 /* MOBILE */
-@media (max-width: 900px) {
-  .hero-container,
-  .content-container {
+/* ============================= */
+@media (max-width: 768px) {
+
+  .icon {
+    display: block;
+  }
+
+  #myLinks {
+    display: none;
     flex-direction: column;
-    text-align: center;
+    width: 100%;
+    background: #333;
+  }
+
+  #myLinks a {
+    border-top: 1px solid #444;
+  }
+
+  #myLinks.active {
+    display: flex;
   }
 }
 
+</style>
+</head>
 
 
 
 
 
-#contact {
-  position: relative !important;
-  float: none !important;
-  clear: both !important;
+<body>
 
-  width: 100% !important;
-  margin: 120px auto 0 auto !important;
-  padding: 80px 100px !important;
+<div class="topnav">
+  <a href="#" class="logo">3X Painting</a>
 
-  display: block !important;
-  text-align: center;
+  <div id="myLinks">
+    <a href="#">Home</a>
+    <a href="services.html">Services</a>
+    <a href="about.html">About</a>
+ <a href="privacy.html">Privacy</a>
+    <a href="contact-form">Contact Us</a>
+  </div>
+
+  <span class="icon" onclick="toggleMenu()">☰</span>
+</div>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById("myLinks");
+  menu.classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dinner is Done</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="logo">
+
+      <div class="logo-icon"></div>
+<a href="index.html">
+  <img src="icon3-Picsart-BackgroundRemover.jpg" height="120" width="200" alt="3X Painting Logo">
+</a>
+      <p><span>🖌️</span></p>
+    </div>
+
+    
+
+  </header>
+<h2 style="margin-left: 65px;">3XPAINTING & RENOVATIONS</h2>
+<p style="margin-left: 65px;">Quality you can trust, prices you’ll love.</p>
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="hero-text fade-in">
+      <h2>Affordable Painter</h2>
+    Need Your Home Painted? Get a Fresh New Look as soon as next week!
+    </p>
+    <p>✔ Smooth, clean, professional results.</p>
+    <p>✔ Free color consultation.</p>
+    <p>✔ We protect your floors, furniture & belongings</p>
+    <p>✔ Affordable pricing</p>
+    <p>✔ Free estimates — no obligation</p>
+
+    <p 
+      Whether it’s one room, the whole house, or touch-ups, I’ve got you covered.
+    </p>
+
+      <a href="https://t.me/ecunha09" target="_blank" class="btn center">Chat on Telegram</a>
+
+    </div>
+
+    <div class="hero-image fade-in">
+      <img src="smooth-wall.png" height="450" width="350"  alt="Hero">
+    </div>
+
+  </section>
+
+  <!-- CONTENT -->
+  <section class="content">
+
+    <!-- LEFT SIDE -->
+    <div class="left-images fade-in">
+
+      <!-- MAIN IMAGE -->
+     <img src="smooth-walls.png" class="main-img">
+
+
+      <!-- SMALL ITEM 1 -->
+      <div class="small-item">
+        <img src="g1.jpg" height="250" width="350"  >
+        <div class="small-text">
+           <h2>Why Choose Us</h2>
+           <p>
+    We focus on delivering clean, reliable, and detail-oriented painting work for every project,
+    with a strong commitment to customer satisfaction.
+  </p>  <ul>
+    <li>✔ Careful surface preparation for long-lasting results</li>
+    <li>✔ Clean and detail-focused work</li>
+    <li>✔ Clear communication from start to finish</li>
+    <li>✔ Free and transparent estimates</li>
+    <li>✔ Interior and exterior residential painting</li>
+  </ul>
+
+
+        </div>
+      </div>
+
+      <!-- SMALL ITEM 2 -->
+      <div class="small-item">
+        <img src="smaill-repair.png" height="250" width="350"  >
+        <div class="small-text">
+          <h3>Our Approach</h3>
+          <p> Every project is handled with the same priority: a quality finish and respect for your space.
+    We take the time to do the job properly instead of rushing through it.</p>
+        </div>
+      </div>
+
+      <!-- SMALL ITEM 3 -->
+      <div class="small-item">
+        <img src="room-painting.jpg" height="550" width="350" >
+        <div class="small-text">
+           <h3>Getting Started</h3>
+          <p>  We are currently accepting new clients and would be happy to provide a free estimate.
+    Contact us by phone or message to schedule your quote.</p>
+<p><strong>Contact us today for a free quote.</strong></p>
+  <a href="mailto:3xpaintingservices@gmail.com" class="btn btn-primary btn-sm email">✉️ Email</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="content-text fade-in">
+   <h1>Sheetrock Services — Precision, Strength & Perfectly Smooth Walls</h1>
+
+<p>
+When it comes to Sheetrock, details matter — and that’s where our expertise stands out.
+</p>
+
+<p>
+We provide professional Sheetrock installation, repair, taping, and finishing with precision that ensures your walls look flawless every time.
+</p>
+
+<ul>
+  <li>Clean, accurate installation with straight lines and solid structure</li>
+  <li>Seamless taping and joint finishing for perfectly smooth surfaces</li>
+  <li>Fast, reliable repairs for cracks, dents, water damage, or uneven areas</li>
+  <li>Paint-ready results that elevate the overall quality of your space</li>
+</ul>
+
+<p style="margin-top:20px;"><strong>We also offer:</strong></p>
+
+<ul>
+  <li>Professional installation for new walls, ceilings, and renovations</li>
+  <li>Strong, durable finishes built to last for years</li>
+  <li>Careful measurement and precise cuts for perfect alignment</li>
+  <li>Complete drywall solutions for homes, apartments, and small jobs</li>
+  <li>Quick turnaround with minimal disruption to your space</li>
+  <li>Clean, respectful work — we protect your floors and furniture</li>
+ <p style="margin-top:20px; font-weight:bold;">
+Get a free estimate today — fast response guaranteed.
+<a href="https://wa.me/18622155740" class="btn">Get a Free Estimate</a>
+</p>
+</ul>
+    </div>
+
+  </section>
+
+
+
+
+
+<div class="topbar"></div>
+ <h2 class="section-title">Apartment Painting & Small Jobs</h2>
+
+See photos before & after
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
 }
 
-#contact form {
-  margin: 0 auto !important;
-  max-width: 440px !important;
+* {
+  box-sizing: border-box;
 }
 
-.page-section {
-  width: 100%;
- clear: both;
+.row > .column {
+  padding: 0 8px;
 }
 
-
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
+.column {
+  float: left;
+  width: 25%;
+}
 
-/* NAVBAR FIX (if fixed position) */
-.navbar {
+/* The Modal (background) */
+.modal {
+  display: none;
   position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
   top: 0;
   width: 100%;
-  height: 70px;
-}
-
-/* CONTACT SECTION RESET */
-#contact {
-  width: 100%;
-  margin-top: 120px;        /* space below navbar */
-  padding: 80px 20px;
-
-  display: block;
-  clear: both;
-
-  text-align: center;       /* centers "Contact Us" */
-  background: #f9f9f9;
-}
-
-/* CENTER HEADING */
-#contact h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* CENTER FORM */
-#contact form {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-/* INPUTS */
-
-#contact input,
-#contact textarea {
-  padding: 12px 14px;
-  line-height: 1.4;
-  box-sizing: border-box;
-}
-
-#contact textarea {
-  height: 180px;   /* increase this as you like */
-  resize: vertical; /* allows user to resize if they want */
-}#contact {
-  border: 3px solid beige;
-}
-
-<!
-...start...>
-
-
-.hero {
-  height: 100vh;           /* full screen */
-  display: flex;
-  justify-content: center; /* horizontal */
-  align-items: center;     /* vertical */
-  background-color: #f0f0f0;
-}
-
-.center-text {
-  font-size: 2rem;
-  color: #333;
-  text-align: center;
-}
-<!..end...>
-
-
-.hero {
-  height: calc(80vh - 70px); /* navbar height */
-  margin-top: 10px;
-}
-
-#contact textarea {
-  padding-top: 10px;
-}
-#contact ::placeholder {
-  color: #777;
-  font-size: 14px;
-}
-
-#contact {
-  padding-top: 40px; /* reduce if needed */
-}
-
-#contact input,
-#contact textarea {
-  width: 100%;
-  padding: 12px 14px;
-  margin-bottom: 15px;
-  line-height: 1.4;
-  box-sizing: border-box;
-}
-
-#contact textarea {
-  height: 180px;
-  resize: vertical;
-  padding-top: 10px;
-}
-
-#contact {
-  width: 100%;
-  padding: 40px 20px;   /* REDUCED = moves text up */
-  margin-top: 60px;     /* space below navbar */
-
-  text-align: center;
-  background: #F0FFFF;
-}
-
-#contact h2 {
-  margin-bottom: 10px;
-}
-
-<!...Start form...>
-.contact-wrapper {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  gap: 60px;
-  align-items: center;
-}
-
-/* FORM */
-.contact-wrapper form {
-  flex: 1;
-}
-
-/* IMAGE */
-.contact-image {
-  flex: 1;
-}
-
-.contact-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px; /* optional */
-}
-
-@media (max-width: 900px) {
-  .contact-wrapper {
-    flex-direction: column;
-  }
-}
-
-.contact-image img {
-  object-fit: cover;
   height: 100%;
+  overflow: auto;
+  background-color: black;
 }
 
-
-/* CONTACT LAYOUT FIX */
-#contact .contact-wrapper {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex !important;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-/* FORM */
-#contact form {
-  flex: 1;
-}
-
-/* IMAGE (SMALL & RIGHT) */
-#contact .contact-image {
-  flex: 0 0 260px; /* fixed small width */
-}
-
-#contact .contact-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 6px;
-}
-
-/* MOBILE: STACK */
-@media (max-width: 900px) {
-  #contact .contact-wrapper {
-    flex-direction: column;
-  }
-
-  #contact .contact-image {
-    flex: none;
-    width: 100%;
-  }
-}
-
-#contact .contact-image {
-  flex: 0 0 300px;
-}
-
-<!...end contact form...>
-
-
-
-<!...Text box from here...>
-
-.carousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.image-wrapper {
+/* Modal Content */
+.modal-content {
   position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
 }
 
-#carousel-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.carousel-text {
-  position: absolute;
-  bottom: 20px;          /* safer than center */
-  left: 50%;
-  transform: translateX(-50%);
+/* The Close Button */
+.close {
   color: white;
-  font-size: 1.5rem;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
   font-weight: bold;
-  background: rgba(0,0,0,0.5);
-  padding: 8px 14px;
-  border-radius: 4px;
-  pointer-events: none; /* prevents button issues */
 }
 
-.carousel-text {
-  text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-#carousel-img {
-  transition: opacity 0.4s ease;
+.mySlides {
+  display: none;
 }
 
-.carousel-text {
-  font-size: clamp(1rem, 3vw, 1.8rem);
+.cursor {
+  cursor: pointer;
 }
 
-.carousel-text {
-  /* styles */
-}
-
-.carousel-text {
-  background: black !important;
-  color: white !important;
-}
-.carousel .carousel-text {
-  z-index: 10;
-}
-
-
-.image-wrapper {
-  position: relative;
-}
-
-.carousel-text {
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
   position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0,0,0,0.6);
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
   color: white;
-  padding: 8px 14px;
-  font-size: 1.2rem;
-  z-index: 5;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-@media (max-width: 600px) {
-  .image-wrapper {
-    width: 90%;   /* smaller width on mobile */
-    height: 200px; /* smaller height */
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+</style>
+<body>
+
+<h2 style="text-align:center">Before & After Gallery</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painter.jpg" style="width:100%" height="230"  onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="best-painters.jpg" style="width:100%" height="230"  onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="t2.jpg" style="width:100%" height="230" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="t3.jpg" style="width:100%" height="230"  onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+  <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="images/best-painter.jpg" style:="width="750" height="950">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painters.jpg" style:="width="750" height="950">
+    </div>
+<div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="img/painter-near-me.jpg" style:="width="750" height="950">
+
+    </div>
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="img/merda.JPG" style="width:="750" height="950">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="img/IMG_4720.JPG" style:="width="750" height="950">
+    </div>
+   <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="img/fix-deck.JPG" style="width="750" height="950">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="img/IMG_4727.JPG" style="width="750" height="950">
+    </div>
+      <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="img/IMG_4728.JPG" style:="width="750" height="950">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="https://raw.githubusercontent.com/cunha1875/img/refs/heads/main/best-painter.jpg" style:="width="750" height="950">
+    </div>
+
+<div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+  <img src="img\painter-near-me.JPG" class="main-img">
+    </div>
+
+
+<div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="img/benjamin.jpg" style:="width="750" height="950">
+    </div>
+
+
+<div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="img/IMG_4726.JPG" style:="width="750" height="950">
+    </div>
+
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="kitchen-repair1.jpg" style="width:100%" height="350"  onclick="currentSlide(1)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="kitchen-repairs.jpg" style="width:100%" height="350"  onclick="currentSlide(2)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="t.jpg" style="width:100%"  height="350"  onclick="currentSlide(3)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="room-painting.jpg" style="width:100%"  height="350"  onclick="currentSlide(4)" alt="s">
+
+
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
   }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<script src="scripts.js"></script>
+
+ <div id="contact-form">
+
+<!-- CONTACT FORM -->
+
+
+  <link rel="stylesheet" href="style1.css">
+
+<!...end...>
+
+
+
+
+
+
+
+
+<div class="posts-section">
+
+  <div class="post-card">
+<h1>3Xpainting</h1>
+
+<div class="full-section">
+
+  <div class="col">
+    <h3>Contact Info</h3>
+    <p><strong>📞:</strong> (862) 215-5740</p>
+    <p><strong>Location:</strong>  </p>
+    <p>Newark, NJ •Serving surrounding areas & Lehigh valley center</p>
+
+  </div>
+
+  <div class="col">
+    <h3>Get a Free Quote</h3>
+   
+    <p>Give us a call or send an emaill</p>
+  </div>
+
+  <div class="col">
+    <h3>Our Services</h3>
+    <p>Interior Painting</p>
+    <p>Exterior Painting</p>
+    <p>Drywall damage to fresh paint</p>
+    <p>Small Jobs & Repairs</p>
+  </div>
+
+</div>
+  </div>
+
+  <div class="post-card">
+  
+<h3>Need a Quote Fast?</h3>
+
+<p>Call or message us today and get a fast estimate.</p>
+
+<p><strong>📞 (862) 215-5740</strong></p>
+
+<p>Available next week!</p>
+
+  <div class="contact-buttons">
+    <div class="contact-icons">
+  <a href="https://wa.me/8622155740"><img src="whatsapp.png"  alt="WhatsApp"></a>
+  <a href="https://t.me/ecunha09"><img src="telegram.png" alt="Telegram"></a>
+  <a href="mailto:3xpaintingservices@gmail.com"><img src="email.png" height="24" width="20" alt="Email"></a>
+</div>
+  </div>
+
+
+
+  </div>
+
+  <div class="post-card">
+   <!-- CONTACT FORM -->
+
+ <div class="contact-right">
+
+<div class="contact-form">
+  <h2>Get a Free Quote</h2>
+
+  <form action="#" method="post">
+
+    <!-- Name -->
+    <label for="first-name">First Name *</label>
+    <input type="text" id="first-name" name="first_name" required>
+
+    <label for="last-name">Last Name (optional)</label>
+    <input type="text" id="last-name" name="last_name">
+
+    <!-- Contact Info -->
+    <label for="phone">Phone Number *</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required>
+
+  <label for="zip">Zip Code *</label>
+    <input type="text" id="zip" name="zip" required>
+
+    <!-- Job Details -->
+    <label for="subject">Subject *</label>
+    <input type="text" id="subject" name="subject" required>
+
+  
+
+    <!-- Message -->
+    <label for="message">Project Details *</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <!-- Submit -->
+    <button type="submit">Request Quote</button>
+
+  </form>
+</div>
+
+<!-- BASIC STYLING -->
+<style>
+.contact-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #f9f9f9;
+  border-radius: 8px;
 }
 
+.contact-form h2 {
+  margin-bottom: 20px;
 }
 
-.carousel .image-wrapper {
-  position: relative;
+.contact-form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
 }
 
-.carousel .image-wrapper .carousel-text {
-  position: absolute !important;
-  bottom: 20px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-
-  color: white;
-  background: rgba(0,0,0,0.6);
-  padding: 8px 16px;
-  font-size: 1.2rem;
-  z-index: 999;
-}
-
-.image-wrapper {
-  width: 550px;
-  height: 360px;
-  position: relative;
-  overflow: hidden;
-}
-
-#carousel-img {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-<!...End text box...>
+.contact-form button {
+  margin-top: 20px;
+  padding: 12px;
+  width: 100%;
+  background: #c97c3a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #a9652f;
+}
+</style>
 
 
+  </div>
+
+</div>
+  </div>
+
+</div>
+
+<div class="container">
+
+ <!-- Footer -->
+    <footer>
+        &copy; 2026 My Website. All rights reserved.
+    </footer>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</body>
+</html>
 
 
 
