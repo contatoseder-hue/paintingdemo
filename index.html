@@ -2,95 +2,101 @@
 
 
 
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<div class="container">
-<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* ============================= */
-/* NAVBAR */
-/* ============================= */
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+  <!-- Browser Title -->
+  <title>3X Painting & Renovations | Quality You Can Trust</title>
 
-.topnav {
-  background-color: #333;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 15px;
-}
+  <!-- SEO Description -->
+  <meta name="description" content="Professional painting and renovation services with quality you can trust and prices you'll love. Serving New Jersey and surrounding areas.">
 
-/* Logo */
-.logo {
-  color: white;
-  font-size: 18px;
-  text-decoration: none;
-  padding: 14px 0;
-}
+  <!-- Facebook / WhatsApp Preview -->
+  <meta property="og:title" content="3X Painting & Renovations">
+  <meta property="og:description" content="Quality you can trust, prices you'll love. Professional painting services in New Jersey.">
+  <meta property="og:image" content="https://yourdomain.com/preview-image.jpg">
+  <meta property="og:url" content="https://yourdomain.com">
+  <meta property="og:type" content="website">
 
-/* Links container */
-#myLinks {
-  display: flex;
-}
+  <link rel="stylesheet" href="styles.css">
 
-/* Links */
-#myLinks a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  display: block;
-}
+  <style>
+    /* ============================= */
+    /* NAVBAR */
+    /* ============================= */
 
-#myLinks a:hover {
-  background-color: #ddd;
-  color: black;
-}
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-/* Hamburger button */
-.icon {
-  display: none;
-  font-size: 22px;
-  cursor: pointer;
-  color: white;
-}
+    .topnav {
+      background-color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+    }
 
-/* ============================= */
-/* MOBILE */
-/* ============================= */
-@media (max-width: 768px) {
+    .logo {
+      color: white;
+      font-size: 18px;
+      text-decoration: none;
+      padding: 14px 0;
+    }
 
-  .icon {
-    display: block;
-  }
+    #myLinks {
+      display: flex;
+    }
 
-  #myLinks {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #333;
-  }
+    #myLinks a {
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      display: block;
+    }
 
-  #myLinks a {
-    border-top: 1px solid #444;
-  }
+    #myLinks a:hover {
+      background-color: #ddd;
+      color: black;
+    }
 
-  #myLinks.active {
-    display: flex;
-  }
-}
+    .icon {
+      display: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: white;
+    }
 
-</style>
+    /* ============================= */
+    /* MOBILE */
+    /* ============================= */
+
+    @media (max-width: 768px) {
+      .icon {
+        display: block;
+      }
+
+      #myLinks {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #333;
+      }
+
+      #myLinks a {
+        border-top: 1px solid #444;
+      }
+
+      #myLinks.active {
+        display: flex;
+      }
+    }
+  </style>
 </head>
-
-
-
-
 
 <body>
 
@@ -101,10 +107,9 @@ body {
     <a href="#">Home</a>
     <a href="services.html">Services</a>
     <a href="about.html">About</a>
- <a href="privacy.html">Privacy</a>
+    <a href="privacy.html">Privacy</a>
     <a href="#contact-form">Contact Us</a>
   </div>
-
 
   <span class="icon" onclick="toggleMenu()">☰</span>
 </div>
@@ -115,27 +120,6 @@ function toggleMenu() {
   menu.classList.toggle("active");
 }
 </script>
-
-</body>
-</html>
-
-
-
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Dinner is Done</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
 
   <!-- NAVBAR -->
   <header class="navbar">
@@ -627,12 +611,14 @@ function showSlides(n) {
 <p><strong>📞 (862) 215-5740</strong></p>
 
 <p>Available next week!</p>
+<p><strong>Not sure if we cover your area? Contact us to check availability—we’re happy to help</strong></p>
 
   <div class="contact-buttons">
     <div class="contact-icons">
   <a href="https://wa.me/8622155740"><img src="whatsapp.png"  alt="WhatsApp"></a>
   <a href="https://t.me/ecunha09"><img src="telegram.png" alt="Telegram"></a>
   <a href="mailto:3xpaintingservices@gmail.com"><img src="email.png" height="24" width="20" alt="Email"></a>
+
 </div>
   </div>
 
@@ -743,7 +729,7 @@ function showSlides(n) {
 
  <!-- Footer -->
     <footer>
-        &copy; 2026 All rights reserved.
+        &copy; 2026 My Website. All rights reserved.
     </footer>
 
 
